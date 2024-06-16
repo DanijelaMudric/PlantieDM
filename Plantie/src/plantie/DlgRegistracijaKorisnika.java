@@ -15,6 +15,7 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.awt.event.ActionEvent;
+import java.awt.Color;
 
 public class DlgRegistracijaKorisnika extends JDialog {
 
@@ -47,6 +48,7 @@ public class DlgRegistracijaKorisnika extends JDialog {
 	public DlgRegistracijaKorisnika () {
 		setBounds(100, 100, 450, 414);
 		getContentPane().setLayout(new BorderLayout());
+		contentPanel.setBackground(new Color(202, 255, 202));
 		contentPanel.setBorder(new EmptyBorder(5, 5, 5, 5));
 		getContentPane().add(contentPanel, BorderLayout.CENTER);
 		contentPanel.setLayout(null);
@@ -121,6 +123,10 @@ public class DlgRegistracijaKorisnika extends JDialog {
 			lblID_korisnika_3.setBounds(87, 288, 81, 14);
 			contentPanel.add(lblID_korisnika_3);
 		}
+		
+		JLabel lblNewLabel = new JLabel("Zapamtite vas ID za Log-in");
+		lblNewLabel.setBounds(152, 0, 145, 35);
+		contentPanel.add(lblNewLabel);
 		{
 			JPanel buttonPane = new JPanel();
 			buttonPane.setLayout(new FlowLayout(FlowLayout.RIGHT));
